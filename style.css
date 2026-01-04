@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.glow {
+  font-size: 3rem;
+  text-shadow: 0 0 20px cyan;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px cyan; }
+  to { text-shadow: 0 0 30px cyan; }
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: cyan;
+  color: black;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 80px 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* INTERACTIVE */
+.interactive {
+  padding: 80px 20px;
+}
+
+#circle {
+  width: 120px;
+  height: 120px;
+  background: cyan;
+  border-radius: 50%;
+  margin: 30px auto;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 cyan; }
+  100% { box-shadow: 0 0 40px cyan; }
+}
+
+footer {
+  padding: 20px;
+  opacity: 0.7;
+}
